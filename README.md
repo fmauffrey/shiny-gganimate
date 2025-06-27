@@ -1,2 +1,5 @@
 # shiny-gganimate
-Shiny UI for creating animated plot using gganimate
+Shiny UI for creating animated plot using gganimate  
+
+Work in progress ...
+
