@@ -12,10 +12,12 @@ server <- function(input, output, session) {
                   animated_path = NULL)
   
   observe({
-    parameters <- colnames(objects$data)
-    updateSelectInput(session, "plot_x", choices=setNames(as.list(parameters), parameters))
-    updateSelectInput(session, "plot_y", choices=setNames(as.list(parameters), parameters))
-    updateSelectInput(session, "transition", choices=setNames(as.list(parameters), parameters))
+    parameters <- setNames(as.list(colnames(objects$data)), colnames(objects$data))
+    updateSelectInput(session, "plot_x", choices=parameters)
+    updateSelectInput(session, "plot_y", choices=parameters)
+    updateSelectInput(session, "plot_color", choices=c("None" = "None", parameters))
+    updateSelectInput(session, "plot_fill", choices=c("None" = "None", parameters))
+    updateSelectInput(session, "transition", choices=parameters)
   })
   
   observeEvent(input$load_iris_dataset, {

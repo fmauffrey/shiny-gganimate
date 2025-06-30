@@ -13,6 +13,8 @@ box_main_parameters <- function(){
                                "Violin plot"
                                )),
     selectInput("plot_x", "X axis", choices=list()),
-    selectInput("plot_y", "Y axis", choices=list())
+    selectInput("plot_y", "Y axis", choices=list()),
+    selectInput("plot_color", "Color", choices=list()),
+    selectInput("plot_fill", "fill", choices=list())
   )
 }
