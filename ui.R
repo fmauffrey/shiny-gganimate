@@ -9,6 +9,7 @@ library(shinycssloaders)
 source(here("ui", "box_main_parameters.R"))
 source(here("ui", "box_annotations.R"))
 source(here("ui", "box_animation.R"))
+source(here("ui", "box_colors_settings.R"))
 
 # Setting loading animation
 options(spinner.type = 6)
@@ -48,7 +49,8 @@ dashboardPage(
           column(
             width = 4,
             box_main_parameters(),
-            box_annotations()
+            box_annotations(),
+            box_colors_settings()
           ),
           column(
             width = 1,
